@@ -1,2 +1,6 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+body {
+	font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+}
