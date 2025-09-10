@@ -29,11 +29,11 @@
 		style="width: {scrollProgress * 100}%"
 	/>
 {/if}
-<nav class="mb-16 flex flex-row justify-between bg-neutral-50 p-4 shadow">
-	<a href="/" class="text-lg">Pedestal ¾</a>
-	<div class="flex flex-row gap-4">
-		<a href="/now">/now</a>
-		<a href="/about">/about</a>
-		<a href="/rss.xml">/feed</a>
+<nav class="mb-16 flex flex-row justify-between border-b border-b-[#f3f3f3] p-4">
+	<a href="/" class="text-2xl font-bold">Pedestal ¾</a>
+	<div class="flex flex-row gap-4 font-medium">
+		<a class="hover:text-[#4b4b4b]" href="/now">/now</a>
+		<a class="hover:text-[#4b4b4b]" href="/about">/about</a>
+		<a class="hover:text-[#4b4b4b]" href="/rss.xml">/feed</a>
 	</div>
 </nav>

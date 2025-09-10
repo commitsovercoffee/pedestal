@@ -26,12 +26,12 @@
 </script>
 
 {#if tags.length > 0}
-	<div class="flex flex-wrap gap-2">
+	<div class="my-6 flex flex-wrap gap-2">
 		{#each tags as tag (tag)}
 			<button
 				class={[
-					'cursor-pointer rounded border px-2 py-1',
-					selectedTags.has(tag) && 'bg-neutral-200'
+					selectedTags.has(tag) ? 'bg-highlight' : 'bg-secondary',
+					'cursor-pointer rounded-lg px-2.5 py-2 transition-colors duration-200 ease-in'
 				]}
 				onclick={() => selectedTags[selectedTags.has(tag) ? 'delete' : 'add'](tag)}
 			>
@@ -44,14 +44,14 @@
 <ul class="flex flex-col pl-0">
 	{#if filteredPosts.length > 0}
 		{#each filteredPosts as post (post)}
-			<a href={`/blog/${post.slug}`} class="group no-underline not-last:border-b">
+			<a
+				href={`/blog/${post.slug}`}
+				class="group border-highlight px-4 no-underline transition-colors duration-300 ease-in not-last:border-b-1 hover:bg-secondary"
+			>
 				<dl>
 					<dt class="text-fg">
 						{post.title}
 					</dt>
-					<span
-						class="bg-primary block h-0.5 max-w-12 transition-all duration-300 group-hover:max-w-sm"
-					></span>
 					<dd class="text-body pl-0 font-normal md:pl-4">{post.desc}</dd>
 				</dl>
 			</a>

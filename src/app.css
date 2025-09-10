@@ -4,3 +4,19 @@
 body {
 	font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 }
+
+@theme inline {
+	--color-primary: var(--primary);
+	--color-secondary: var(--secondary);
+	--color-tertiary: var(--tertiary);
+	--color-highlight: var(--highlight);
+}
+
+@layer base {
+	.light {
+		--primary: #000000;
+		--secondary: #f3f3f3;
+		--tertiary: #ffffff;
+		--highlight: #dddddd;
+	}
+}
