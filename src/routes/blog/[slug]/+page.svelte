@@ -12,6 +12,9 @@
 	<p class="italic">
 		{data.desc}
 	</p>
+	<p>
+		{Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(new Date(data.date))}
+	</p>
 	<hr />
 	<data.content />
 </article>
