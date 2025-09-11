@@ -26,7 +26,7 @@
 </script>
 
 {#if tags.length > 0}
-	<div class="my-6 flex flex-wrap gap-2">
+	<div class="my-16 flex flex-wrap gap-2">
 		{#each tags as tag (tag)}
 			<button
 				class={[
@@ -41,12 +41,12 @@
 	</div>
 {/if}
 
-<ul class="flex flex-col pl-0">
+<ul class="flex flex-col pb-32 pl-0">
 	{#if filteredPosts.length > 0}
 		{#each filteredPosts as post (post)}
 			<a
 				href={`/blog/${post.slug}`}
-				class="group border-highlight px-4 no-underline transition-colors duration-300 ease-in not-last:border-b-1 hover:bg-secondary"
+				class="group border-highlight p-4 no-underline transition-colors duration-300 ease-in not-last:border-b-1 hover:bg-secondary"
 			>
 				<dl>
 					<dt class="text-fg">

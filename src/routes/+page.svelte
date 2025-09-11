@@ -14,24 +14,23 @@
 
 <h1>Welcome</h1>
 <p>
-	Hi there — welcome to my little corner of the internet. This is where I share thoughts, ideas,
-	projects, and the occasional ramble about whatever I’m currently interested in. It’s a mix of
-	personal notes, experiments, and things I’ve picked up along the way. Nothing too formal — just a
-	space to think out loud and keep track of where my curiosity leads me.
+	Hi, I’m a software developer, and this is where I share projects, ideas, and a blog about code,
+	tech, and whatever else catches my curiosity. Just a small corner of the internet to show what I’m
+	working on and thinking about.
 </p>
 <hr />
 
-<h2>Some Stuff I Made.</h2>
+<h2>Some Stuff I Made</h2>
 <p>
-	I have a habit of starting odd little experiments — some useful, some ridiculous, all fun. Here
-	are a few highlights.
+	A mix of experiments, happy accidents, and ideas I couldn’t resist trying, proof that I enjoy
+	creating more than explaining why.
 </p>
 <Projects />
 <hr />
 
-<h2>Some Stuff I Wrote.</h2>
+<h2>Some Stuff I Wrote</h2>
 <p>
-	I like to write things down as a way of thinking out loud. Some posts are polished essays, others
-	are just half-baked notes.
+	No promises of wisdom, just occasional clarity, sporadic laughs, and the faint hope someone,
+	somewhere, gets it.
 </p>
 <Posts {data} />
