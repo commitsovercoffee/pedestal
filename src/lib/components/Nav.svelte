@@ -46,6 +46,9 @@
 			onclick={() => {
 				theme.prefers = theme.prefers === 'light' ? 'dark' : 'light';
 				localStorage.setItem('theme', theme.prefers);
+
+				document.documentElement.classList.remove('light', 'dark');
+				document.documentElement.classList.add(theme.prefers);
 			}}
 			aria-label="theme toggle"
 			class="cursor-pointer rounded-lg p-2 hover:bg-tertiary"

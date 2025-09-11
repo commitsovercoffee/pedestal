@@ -8,9 +8,8 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const theme = 'github-light';
 const highlighter = await createHighlighter({
-	themes: [theme],
+	themes: ['catppuccin-latte', 'catppuccin-mocha'],
 	langs: ['javascript', 'typescript', 'go', 'bash', 'json', 'svelte', 'diff', 'md']
 });
 
@@ -21,7 +20,15 @@ const mdsvexOptions = {
 	},
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
-			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }));
+			const html = escapeSvelte(
+				highlighter.codeToHtml(code, {
+					lang,
+					themes: {
+						light: 'catppuccin-latte',
+						dark: 'catppuccin-mocha'
+					}
+				})
+			);
 			return `{@html \`${html}\` }`;
 		}
 	}
