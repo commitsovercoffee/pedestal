@@ -8,7 +8,7 @@
 	<title>Pedestal ¾ | My Blog</title>
 	<meta
 		name="description"
-		content="A personal corner of the internet to share thoughts, ideas, projects, and experiments."
+		content="My personal corner of the internet to share thoughts, ideas, projects, and experiments."
 	/>
 </svelte:head>
 

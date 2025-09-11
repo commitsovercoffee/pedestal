@@ -3,20 +3,20 @@ export const prerender = true;
 
 export async function GET() {
 	const feed = new Feed({
-		title: 'Pedestal ¾',
-		description: 'Pedestal Blog Feed',
-		id: 'https://pedestal.commitsovercoffee.com',
-		link: 'https://pedestal.commitsovercoffee.com',
+		title: 'Your Name',
+		description: 'Your Name | Blog',
+		id: 'https://your-domain.com',
+		link: 'https://your-domain.com',
 		language: 'en', // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
-		copyright: `Copyright ${new Date().getFullYear().toString()}, Pedestal ¾`,
+		copyright: `Copyright ${new Date().getFullYear().toString()}, Your Name`,
 		generator: '💾', // optional, default = 'Feed for Node.js'
 		feedLinks: {
-			rss: 'https://pedestal.commitsovercoffee.com/rss.xml'
+			rss: 'https://your-domain.com/rss.xml'
 		},
 		author: {
-			name: 'Someone',
-			email: 'someone@gmail.com',
-			link: 'https://pedestal.commitsovercoffee.com'
+			name: 'Your Name',
+			email: 'your-mail@gmail.com',
+			link: 'https://your-domain.com'
 		},
 		ttl: 60
 	});
@@ -32,12 +32,12 @@ export async function GET() {
 			title: post.title,
 			description: post.desc,
 			content: `<p>${post.desc}</p>`,
-			link: `https://pedestal.commitsovercoffee.com/blog/${post.slug}`,
+			link: `https://your-domain.com/blog/${post.slug}`,
 			author: [
 				{
-					name: 'Someone',
-					email: 'someone@gmail.com',
-					link: 'https://pedestal.commitsovercoffee.com'
+					name: 'Your Name',
+					email: 'your-mail@gmail.com',
+					link: 'https://your-domain.com'
 				}
 			],
 			date: new Date(post.date)

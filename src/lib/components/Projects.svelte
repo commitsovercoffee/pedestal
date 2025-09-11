@@ -4,27 +4,19 @@
 	const projects = [
 		{
 			name: 'GPT 404',
-			desc: "An AI that only says 'I dunno, man.' Surprisingly honest. Surprisingly unhelpful.",
-			demo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1',
-			source: 'https://github.com/you/your-project'
+			desc: "An AI that only says 'I dunno, man.' Surprisingly honest. Surprisingly unhelpful."
 		},
 		{
 			name: 'Tab Goblin',
-			desc: 'A Chrome extension that spawns three new tabs every time you close one.',
-			demo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1',
-			source: 'https://github.com/you/your-project'
+			desc: 'A Chrome extension that spawns three new tabs every time you close one.'
 		},
 		{
 			name: 'Yellow Duckie',
-			desc: 'A virtual duck that listens while you talk through your code.',
-			demo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1',
-			source: 'https://github.com/you/your-project'
+			desc: 'A virtual duck that listens while you talk through your code.'
 		},
 		{
 			name: 'Infinite To-Do',
-			desc: 'A to-do list that automatically adds tasks as you complete them.',
-			demo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1',
-			source: 'https://github.com/you/your-project'
+			desc: 'A to-do list that automatically adds tasks as you complete them.'
 		}
 	];
 </script>
@@ -37,8 +29,12 @@
 				<p>{project.desc}</p>
 			</div>
 			<div class="mt-4 flex gap-2">
-				<Button label="Demo" />
-				<Button label="Source" type="secondary" />
+				<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
+					<Button label="Demo" />
+				</a>
+				<a target="_blank" href="https://github.com/username/repo">
+					<Button label="Source" type="secondary" />
+				</a>
 			</div>
 		</div>
 	{/each}
