@@ -1,6 +1,12 @@
+import adapter from '@sveltejs/adapter-static';
 import { mdsvex, escapeSvelte } from 'mdsvex';
 import { createHighlighter } from 'shiki';
-import adapter from '@sveltejs/adapter-static';
+
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const theme = 'github-light';
 const highlighter = await createHighlighter({
@@ -10,6 +16,9 @@ const highlighter = await createHighlighter({
 
 const mdsvexOptions = {
 	extensions: ['.md'],
+	layout: {
+		default: join(__dirname, 'src/lib/markdown/layout.svelte')
+	},
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
 			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }));

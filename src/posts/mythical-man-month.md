@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "The Mythical Man-Month"
 date: 2025-08-09
 tags: ["tech culture", "productivity"]

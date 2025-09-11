@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Being a Woman in Tech"
 date: 2025-09-11
 tags: ["personal", "thoughts" ]

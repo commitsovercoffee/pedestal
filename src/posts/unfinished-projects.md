@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Half-Finished Projects Are Underrated"
 date: 2025-09-09
 tags: ["thoughts" ]

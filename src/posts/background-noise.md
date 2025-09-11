@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Coding with Background Noise"
 date: 2025-07-09
 tags: ["productivity"]
