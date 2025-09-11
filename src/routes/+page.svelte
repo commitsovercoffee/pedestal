@@ -1,36 +1,50 @@
 <script>
 	import Posts from '$lib/components/Posts.svelte';
 	import Projects from '$lib/components/Projects.svelte';
+	import Ana from '$lib/assets/ana.jpg';
 	let { data } = $props();
 </script>
 
 <svelte:head>
-	<title>Pedestal ¾ | My Blog</title>
+	<title>Ana | Blog</title>
 	<meta
 		name="description"
 		content="My personal corner of the internet to share thoughts, ideas, projects, and experiments."
 	/>
 </svelte:head>
 
-<h1>Welcome</h1>
-<p>
-	Hi, I’m a software developer, and this is where I share projects, ideas, and a blog about code,
-	tech, and whatever else catches my curiosity. Just a small corner of the internet to show what I’m
-	working on and thinking about.
-</p>
+<div class="grid grid-cols-1 items-center gap-4 md:grid-cols-2">
+	<div class="order-1 flex justify-center md:order-1 md:justify-start">
+		<img
+			src={Ana}
+			alt="Ana eating with her mouth full."
+			class="not-prose h-60 w-60 rounded-full object-cover shadow-lg"
+		/>
+	</div>
+	<div class="order-2 md:order-2">
+		<h2>Welcome</h2>
+		<p>
+			Hi, I’m Ana — 27, a senior systems engineer with 5 years of experience. I'm glad you made it
+			here. This is my web garden ~ just a small corner of the internet to show what I’m working on
+			and thinking about.
+		</p>
+	</div>
+</div>
 <hr />
 
-<h2>Some Stuff I Made</h2>
+<h2>Things I’ve Built</h2>
 <p>
-	A mix of experiments, happy accidents, and ideas I couldn’t resist trying, proof that I enjoy
-	creating more than explaining why.
+	A collection of side projects I couldn’t resist trying. I tend to follow my curiosity more than a
+	roadmap. For me, building is less about perfection and more about learning, tinkering, and seeing
+	where an idea might lead.
 </p>
 <Projects />
 <hr />
 
-<h2>Some Stuff I Wrote</h2>
+<h2>Things I’ve Written</h2>
 <p>
-	No promises of wisdom, just occasional clarity, sporadic laughs, and the faint hope someone,
-	somewhere, gets it.
+	Not so much grand advice as scattered thoughts, sometimes clear, sometimes messy, and hopefully a
+	little relatable. Every now and then there’s a spark of clarity, a laugh at my own expense, or
+	just a note to remember. If any of it resonates with someone out there, that’s more than enough.
 </p>
 <Posts {data} />

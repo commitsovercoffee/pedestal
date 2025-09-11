@@ -40,7 +40,7 @@
 <nav
 	class="mb-16 flex flex-row items-center justify-between border-b border-b-tertiary p-4 text-primary"
 >
-	<a href="/" class="text-2xl font-bold">Pedestal ¾</a>
+	<a href="/" class="text-2xl font-bold">Ana Baker</a>
 	<div class="flex flex-row gap-2 font-medium">
 		<button
 			onclick={() => {

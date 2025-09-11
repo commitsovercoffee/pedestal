@@ -3,27 +3,27 @@
 
 	const projects = [
 		{
-			name: 'GPT 404',
-			desc: "An AI that only says 'I dunno, man.' Surprisingly honest. Surprisingly unhelpful."
+			name: 'Pixel Pockets',
+			desc: 'A tiny web app that saves little doodles and notes in your browser like a pocket-sized sketchbook.'
 		},
 		{
-			name: 'Tab Goblin',
-			desc: 'A Chrome extension that spawns three new tabs every time you close one.'
+			name: 'Coffee Timer++',
+			desc: 'A minimalist coffee brewing timer with gentle sounds because I drink way too much coffee.'
 		},
 		{
-			name: 'Yellow Duckie',
-			desc: 'A virtual duck that listens while you talk through your code.'
+			name: 'Starwhisper',
+			desc: 'A mood-based journaling app that matches your entry with a random constellation. Half therapy, half stargazing.'
 		},
 		{
-			name: 'Infinite To-Do',
-			desc: 'A to-do list that automatically adds tasks as you complete them.'
+			name: 'Shortcut Gremlin',
+			desc: 'A desktop toy that playfully swaps your most-used keyboard shortcuts for silly ones, just to keep you on your toes.'
 		}
 	];
 </script>
 
 <article class="my-16 grid auto-rows-fr grid-cols-1 gap-4 md:grid-cols-2">
 	{#each projects as project (project.name)}
-		<div class="flex flex-col justify-between rounded-xl border border-tertiary p-4">
+		<div class="flex flex-col justify-between rounded-xl border-2 border-tertiary p-4">
 			<div>
 				<h3 class="mt-0 font-bold">{project.name}</h3>
 				<p>{project.desc}</p>

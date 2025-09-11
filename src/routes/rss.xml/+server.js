@@ -1,22 +1,23 @@
 import { Feed } from 'feed';
+
 export const prerender = true;
 
 export async function GET() {
 	const feed = new Feed({
-		title: 'Your Name',
-		description: 'Your Name | Blog',
-		id: 'https://your-domain.com',
-		link: 'https://your-domain.com',
+		title: 'Ana Baker',
+		description: 'Ana Baker | Blog',
+		id: 'https://ana.codes',
+		link: 'https://ana.codes',
 		language: 'en', // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
-		copyright: `Copyright ${new Date().getFullYear().toString()}, Your Name`,
+		copyright: `Copyright ${new Date().getFullYear().toString()}, Ana Baker`,
 		generator: '💾', // optional, default = 'Feed for Node.js'
 		feedLinks: {
-			rss: 'https://your-domain.com/rss.xml'
+			rss: 'https://ana.codes/rss.xml'
 		},
 		author: {
-			name: 'Your Name',
-			email: 'your-mail@gmail.com',
-			link: 'https://your-domain.com'
+			name: 'Ana Baker',
+			email: 'ana.baker@gmail.com',
+			link: 'https://ana.codes'
 		},
 		ttl: 60
 	});
@@ -32,12 +33,12 @@ export async function GET() {
 			title: post.title,
 			description: post.desc,
 			content: `<p>${post.desc}</p>`,
-			link: `https://your-domain.com/blog/${post.slug}`,
+			link: `https://ana.codes/blog/${post.slug}`,
 			author: [
 				{
-					name: 'Your Name',
-					email: 'your-mail@gmail.com',
-					link: 'https://your-domain.com'
+					name: 'Ana Baker',
+					email: 'ana.baker@gmail.com',
+					link: 'https://ana.codes'
 				}
 			],
 			date: new Date(post.date)
