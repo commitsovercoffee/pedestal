@@ -4,8 +4,6 @@
 	let { data } = $props();
 	let { posts } = data;
 
-	// Blog list ---------------------------------------------------------------
-
 	// Collect all unique tags.
 	const tags = [...new Set(posts.flatMap((p) => p.tags || []))];
 
@@ -30,7 +28,7 @@
 		{#each tags as tag (tag)}
 			<button
 				class={[
-					selectedTags.has(tag) ? 'bg-highlight' : 'bg-secondary',
+					selectedTags.has(tag) ? 'bg-highlight' : 'bg-tertiary',
 					'cursor-pointer rounded-lg px-2.5 py-2 transition-colors duration-200 ease-in'
 				]}
 				onclick={() => selectedTags[selectedTags.has(tag) ? 'delete' : 'add'](tag)}
@@ -46,7 +44,7 @@
 		{#each filteredPosts as post (post)}
 			<a
 				href={`/blog/${post.slug}`}
-				class="group border-highlight p-4 no-underline transition-colors duration-300 ease-in not-last:border-b-1 hover:bg-secondary"
+				class="group border-tertiary p-4 no-underline transition-colors duration-300 ease-in not-last:border-b-1 hover:bg-tertiary"
 			>
 				<dl>
 					<dt class="text-fg">

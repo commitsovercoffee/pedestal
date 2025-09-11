@@ -23,7 +23,7 @@
 
 <article class="my-16 grid auto-rows-fr grid-cols-1 gap-4 md:grid-cols-2">
 	{#each projects as project (project.name)}
-		<div class="flex flex-col justify-between rounded-xl border border-secondary p-4">
+		<div class="flex flex-col justify-between rounded-xl border border-tertiary p-4">
 			<div>
 				<h3 class="mt-0 font-bold">{project.name}</h3>
 				<p>{project.desc}</p>

@@ -15,8 +15,15 @@ body {
 @layer base {
 	.light {
 		--primary: #000000;
-		--secondary: #f3f3f3;
-		--tertiary: #ffffff;
+		--secondary: #ffffff;
+		--tertiary: #f3f3f3;
 		--highlight: #dddddd;
+	}
+
+	.dark {
+		--primary: #ffffff;
+		--secondary: #161616;
+		--tertiary: #2c2c2c;
+		--highlight: #444444;
 	}
 }

@@ -1,4 +1,4 @@
-<footer class="light mt-14 flex justify-between bg-secondary p-16">
+<footer class="mt-14 flex justify-between bg-tertiary p-16 text-primary">
 	<p>
 		© {new Date().getFullYear()} Pedestal ¾
 	</p>
