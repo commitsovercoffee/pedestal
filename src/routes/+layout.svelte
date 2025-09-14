@@ -14,10 +14,11 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="{theme.prefers} bg-secondary">
+<div class="{theme.prefers} bg-bg-primary selection:bg-accent selection:text-highlight">
 	<Nav />
 	<div
-		class="mx-auto prose p-4 prose-hr:border-tertiary {theme.prefers === 'dark' && 'prose-invert'}"
+		class="mx-auto prose p-4 prose-hr:border-card-border {theme.prefers === 'dark' &&
+			'prose-invert'}"
 	>
 		{@render children?.()}
 	</div>

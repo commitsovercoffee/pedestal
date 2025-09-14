@@ -13,12 +13,19 @@
 	}
 
 	onMount(() => {
+		// theme ---------------------------------------------------------------
+
 		let storedTheme = localStorage.getItem('theme');
+		const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		if (!storedTheme) {
-			storedTheme = 'dark';
+			storedTheme = systemPrefersDark ? 'dark' : 'light';
 			localStorage.setItem('theme', storedTheme);
 		}
+		document.documentElement.classList.remove('light', 'dark');
+		document.documentElement.classList.add(storedTheme);
 		theme.prefers = storedTheme;
+
+		// scroll --------------------------------------------------------------
 
 		updateScrollProgress();
 		window.addEventListener('scroll', updateScrollProgress);
@@ -38,20 +45,23 @@
 	/>
 {/if}
 <nav
-	class="mb-16 flex flex-row items-center justify-between border-b border-b-tertiary p-4 text-primary"
+	class="prose mb-16 flex max-w-none flex-row items-center justify-between border-b border-b-card-border p-4 {theme.prefers ===
+		'dark' && 'prose-invert'} prose-a:no-underline"
 >
 	<a href="/" class="text-2xl font-bold">Ana Baker</a>
 	<div class="flex flex-row gap-2 font-medium">
 		<button
 			onclick={() => {
+				const html = document.documentElement;
+
 				theme.prefers = theme.prefers === 'light' ? 'dark' : 'light';
 				localStorage.setItem('theme', theme.prefers);
 
-				document.documentElement.classList.remove('light', 'dark');
-				document.documentElement.classList.add(theme.prefers);
+				html.classList.remove('light', 'dark');
+				html.classList.add(theme.prefers);
 			}}
 			aria-label="theme toggle"
-			class="cursor-pointer rounded-lg p-2 hover:bg-tertiary"
+			class="cursor-pointer rounded-lg p-2 hover:bg-card-hover"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +79,7 @@
 				/><path d="M16 12a4 4 0 0 0-4-4" /><path d="m19 5-1.256 1.256" /><path d="M20 12h2" /></svg
 			>
 		</button>
-		<a aria-label="rss" class="cursor-pointer rounded-lg p-2 hover:bg-tertiary" href="/rss.xml">
+		<a aria-label="rss" class="cursor-pointer rounded-lg p-2 hover:bg-card-hover" href="/rss.xml">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"

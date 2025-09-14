@@ -28,8 +28,10 @@
 		{#each tags as tag (tag)}
 			<button
 				class={[
-					selectedTags.has(tag) ? 'bg-highlight' : 'bg-tertiary',
-					'cursor-pointer rounded-lg px-2.5 py-2 transition-colors duration-200 ease-in'
+					selectedTags.has(tag)
+						? 'border-primary bg-primary text-tertiary'
+						: 'border-card-border bg-card-bg hover:bg-card-border',
+					'cursor-pointer rounded-lg border px-2.5 py-1 shadow transition-all duration-200 ease-in'
 				]}
 				onclick={() => selectedTags[selectedTags.has(tag) ? 'delete' : 'add'](tag)}
 			>
@@ -44,7 +46,7 @@
 		{#each filteredPosts as post (post)}
 			<a
 				href={`/blog/${post.slug}`}
-				class="group border-tertiary p-4 no-underline transition-colors duration-300 ease-in not-last:border-b-1 hover:bg-tertiary"
+				class="group border-card-border p-4 no-underline transition-colors duration-300 ease-in not-last:border-b-1 hover:bg-card-hover"
 			>
 				<dl>
 					<dt class="text-fg">

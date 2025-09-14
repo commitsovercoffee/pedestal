@@ -12,20 +12,44 @@ html.dark .shiki span {
 	--color-secondary: var(--secondary);
 	--color-tertiary: var(--tertiary);
 	--color-highlight: var(--highlight);
+	--color-accent: var(--accent);
+
+	--color-bg-primary: var(--bg-primary);
+	--color-bg-secondary: var(--bg-secondary);
+
+	--color-card-bg: var(--card-bg);
+	--color-card-border: var(--card-border);
+	--color-card-hover: var(--card-hover);
 }
 
 @layer base {
 	.light {
 		--primary: #000000;
-		--secondary: #ffffff;
-		--tertiary: #f3f3f3;
+		--secondary: #f3f3f3;
+		--tertiary: #ffffff;
 		--highlight: #dddddd;
+		--accent: #303030;
+
+		--bg-primary: #fafafa;
+		--bg-secondary: #ffffff;
+
+		--card-bg: #ffffff;
+		--card-border: #e6e6e6;
+		--card-hover: #f3f3f3;
 	}
 
 	.dark {
 		--primary: #ffffff;
-		--secondary: #161616;
-		--tertiary: #2c2c2c;
-		--highlight: #444444;
+		--secondary: #2a2a2a;
+		--tertiary: #1e1e1e;
+		--highlight: #2c2c2c;
+		--accent: #bbbbbb;
+
+		--bg-primary: #121212;
+		--bg-secondary: #1a1a1a;
+
+		--card-bg: #1e1e1e;
+		--card-border: #333333;
+		--card-hover: #2a2a2a;
 	}
 }
