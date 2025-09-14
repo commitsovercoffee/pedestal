@@ -29,9 +29,9 @@
 			<button
 				class={[
 					selectedTags.has(tag)
-						? 'border-primary bg-primary text-tertiary'
-						: 'border-card-border bg-card-bg hover:bg-card-border',
-					'cursor-pointer rounded-lg border px-2.5 py-1 shadow transition-all duration-200 ease-in'
+						? 'bg-tag-selected-bg text-tag-selected-text hover:bg-tag-selected-bg-hover'
+						: 'bg-tag-unselected-bg text-tag-unselected-text hover:bg-tag-unselected-bg-hover',
+					'cursor-pointer rounded-lg px-2.5 py-1 shadow transition-all duration-200 ease-in'
 				]}
 				onclick={() => selectedTags[selectedTags.has(tag) ? 'delete' : 'add'](tag)}
 			>
@@ -46,7 +46,7 @@
 		{#each filteredPosts as post (post)}
 			<a
 				href={`/blog/${post.slug}`}
-				class="group border-card-border p-4 no-underline transition-colors duration-300 ease-in not-last:border-b-1 hover:bg-card-hover"
+				class="group border-border p-4 no-underline transition-colors duration-300 ease-in not-last:border-b-1 hover:bg-post-bg-hover"
 			>
 				<dl>
 					<dt class="text-fg">

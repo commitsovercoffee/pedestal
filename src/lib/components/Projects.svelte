@@ -24,7 +24,7 @@
 <article class="my-16 grid auto-rows-fr grid-cols-1 gap-4 md:grid-cols-2">
 	{#each projects as project (project.name)}
 		<div
-			class="flex flex-col justify-between gap-2 rounded-xl border border-card-border bg-card-bg p-4 shadow"
+			class="flex flex-col justify-between gap-2 rounded-xl border border-border bg-project-card-bg p-4 shadow"
 		>
 			<div>
 				<h3 class="mt-0">{project.name}</h3>

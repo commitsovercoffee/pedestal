@@ -1,10 +1,5 @@
-<script>
-	import { theme } from '$lib/shared.svelte';
-</script>
-
 <footer
-	class="prose mt-14 flex max-w-none justify-between bg-highlight px-8 py-16 {theme.prefers ===
-		'dark' && 'prose-invert'} prose-a:no-underline"
+	class="mt-14 flex justify-between border-t border-t-border bg-footer-bg px-8 py-16 prose-a:no-underline"
 >
 	<a href="/">
 		© {new Date().getFullYear()} Ana Baker

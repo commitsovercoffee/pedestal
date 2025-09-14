@@ -40,7 +40,7 @@
 			out:fly={{ easing: cubicIn, x: 40, duration: 200 }}
 			aria-label="Scroll to Top"
 			onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-			class="fixed right-0 bottom-12 cursor-pointer rounded-l-full bg-primary p-4 text-2xl text-tertiary md:bottom-52"
+			class="fixed right-0 bottom-12 cursor-pointer rounded-l-full bg-fg p-4 text-2xl md:bottom-52"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,8 @@
 				stroke-width="2"
 				stroke-linecap="round"
 				stroke-linejoin="round"
-				class="lucide lucide-chevron-up-icon lucide-chevron-up"><path d="m18 15-6-6-6 6" /></svg
+				class="lucide lucide-chevron-up-icon lucide-chevron-up stroke-bg"
+				><path d="m18 15-6-6-6 6" /></svg
 			>
 		</button>
 	{/if}

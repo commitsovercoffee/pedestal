@@ -1,8 +1,7 @@
 <script>
 	import Posts from '$lib/components/Posts.svelte';
 	import Projects from '$lib/components/Projects.svelte';
-	import Ana from '$lib/assets/ana.jpg';
-	import { theme } from '$lib/shared.svelte';
+	import Passport from '$lib/components/Passport.svelte';
 	let { data } = $props();
 </script>
 
@@ -16,26 +15,7 @@
 
 <div class="grid grid-cols-1 items-start gap-4 md:grid-cols-2">
 	<div class="order-1 flex justify-center md:order-1 md:justify-start">
-		<div
-			class="-rotate-6 rounded-xl border border-card-border {theme.prefers === 'light'
-				? 'bg-tertiary'
-				: 'bg-primary'} bg-card-bg p-2 shadow"
-		>
-			<img
-				src={Ana}
-				alt="Ana eating with her mouth full."
-				class="not-prose h-60 w-60 rounded-lg object-cover"
-			/>
-			<p
-				class="mt-1 p-2 leading-tight select-none {theme.prefers === 'light'
-					? 'text-primary'
-					: 'text-tertiary'}"
-			>
-				<span class="font-semibold"> Ana Baker </span>
-				<span class="font-light">She/Her</span> <br />
-				<span> Systems Engineer </span>
-			</p>
-		</div>
+		<Passport />
 	</div>
 	<div class="order-2 md:order-2">
 		<h2>Welcome</h2>
