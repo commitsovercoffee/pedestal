@@ -1,15 +1,21 @@
 # Pedestal
 
+![](screenshot.png)
+
 Just a small blog template I threw together because I keep redesigning my site every few months.
 A lean starter template you can bend, twist, and grow into your own indie corner of the web.
 
-### Features
+## Features
 
 - 📄 Markdown posts.
-- 👩‍💻 Syntax highlighting.
-- 🏷️ Tag-based post filtering.
+- 👩‍💻 Dual-tone syntax highlighting.
+- 📊 Scroll progress bar.
+- ⬆️ Scroll to top.
+- 🧩 Custom components.
+- 🛠️ Override HTML components.
+- 🏷️ Tag post filtering.
 - 📌 Pin posts to the top.
-- 🗂️ Customizable post order.
+- 🗂️ Custom post order.
 - 🗞️ RSS feed.
 
 ## License
