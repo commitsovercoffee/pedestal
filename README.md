@@ -1,7 +1,5 @@
 # Pedestal
 
-![](screenshot.png)
-
 Just a small blog template I threw together because I keep redesigning my site every few months.
 A lean starter template you can bend, twist, and grow into your own indie corner of the web.
 

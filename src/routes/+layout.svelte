@@ -17,7 +17,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="transition-color bg-bg text-fg duration-300 selection:bg-fg selection:text-bg">
+<div class="bg-bg text-fg selection:bg-fg selection:text-bg">
 	<Nav />
 	{#if !navigating.to}
 		<div

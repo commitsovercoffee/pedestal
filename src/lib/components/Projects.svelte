@@ -1,22 +1,29 @@
 <script>
 	import Button from './Button.svelte';
-
 	const projects = [
 		{
 			name: 'Pixel Pockets',
-			desc: 'A tiny web app that saves little doodles and notes in your browser like a pocket-sized sketchbook.'
+			desc: 'A tiny web app that saves little doodles and notes in your browser like a pocket-sized sketchbook.',
+			demo: 'https://theuselessweb.com/',
+			source: 'https://github.com/anna-baker/pixel-pockets'
 		},
 		{
 			name: 'Coffee Timer++',
-			desc: 'A minimalist coffee brewing timer with gentle sounds because I drink way too much coffee.'
+			desc: 'A minimalist coffee brewing timer with gentle sounds because I drink way too much coffee.',
+			demo: 'https://theuselessweb.com/',
+			source: 'https://github.com/anna-baker/coffee-timer'
 		},
 		{
 			name: 'Starwhisper',
-			desc: 'A mood-based journaling app that matches your entry with a random constellation. Half therapy, half stargazing.'
+			desc: 'A mood-based journaling app that matches your entry with a random constellation. Half therapy, half stargazing.',
+			demo: 'https://theuselessweb.com/',
+			source: 'https://github.com/anna-baker/starwhisper'
 		},
 		{
 			name: 'Shortcut Gremlin',
-			desc: 'A desktop toy that playfully swaps your most-used keyboard shortcuts for silly ones, just to keep you on your toes.'
+			desc: 'A desktop toy that playfully swaps your most-used keyboard shortcuts for silly ones, just to keep you on your toes.',
+			demo: 'https://theuselessweb.com/',
+			source: 'https://github.com/anna-baker/shortcut-gremlin'
 		}
 	];
 </script>
@@ -31,10 +38,10 @@
 				<p class="leading-tight">{project.desc}</p>
 			</div>
 			<div class="flex gap-2">
-				<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
+				<a target="_blank" href={project.demo}>
 					<Button label="Demo" />
 				</a>
-				<a target="_blank" href="https://github.com/username/repo">
+				<a target="_blank" href={project.source}>
 					<Button label="Source" type="secondary" />
 				</a>
 			</div>
